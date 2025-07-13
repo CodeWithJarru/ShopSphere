@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Wireless Headphones",
+    "price": "$99.99",
+    "image": "/h.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Smartwatch Pro",
+    "price": "$149.99",
+    "image": "w.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Bluetooth Speaker",
+    "price": "$79.99",
+    "image": "s.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Gaming Mouse RGB",
+    "price": "$39.99",
+    "image": "mrgb.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Mechanical Keyboard",
+    "price": "$89.99",
+    "image": "mk.jpg"
+  },
+  {
+    "id": 6,
+    "title": "4K Action Camera",
+    "price": "$199.99",
+    "image": "c.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Smart LED Bulb",
+    "price": "$19.99",
+    "image": "l.jpg"
+  },
+  {
+    "id": 8,
+    "title": "USB-C Power Bank",
+    "price": "$59.99",
+    "image": "p.jpg"
+  }
+]
