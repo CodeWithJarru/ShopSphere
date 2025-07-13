@@ -1,7 +1,7 @@
-// ✅ Yeh likho (Next.js + Tailwind official recommendation)
+// postcss.config.js
 module.exports = {
   plugins: {
-    tailwindcss: {},
+    '@tailwindcss/postcss': {},
     autoprefixer: {},
   },
 };
