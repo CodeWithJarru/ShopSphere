@@ -2,18 +2,20 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // ✅ FIXED: Added import
 import Loading from "./Loading";
 
 export default function CardSection() {
   const [products, setProducts] = useState([]);
-useEffect(() => {
+  const [loading, setLoading] = useState(false); // ✅ FIXED: Added loading state
+  const pathname = usePathname(); // ✅ FIXED: Defined pathname
+
+  useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => setLoading(false), 500); // simulate loader time
     return () => clearTimeout(timer);
-  }, [pathname]); // run every route change
+  }, [pathname]); // ✅ FIXED: Now it works
 
-
-  
   useEffect(() => {
     fetch("/db.json")
       .then(res => res.json())
@@ -21,8 +23,9 @@ useEffect(() => {
   }, []);
 
   return (
-    
-    <section className="py-10 px-4 md:px-12 bg-gray-100 dark:bg-gray-900 transition">{loading && <Loading />}
+    <section className="py-10 px-4 md:px-12 bg-gray-100 dark:bg-gray-900 transition">
+      {loading && <Loading />}
+      
       <h2 className="text-2xl font-bold text-center mb-8 text-gray-800 dark:text-white">
         Featured Products
       </h2>

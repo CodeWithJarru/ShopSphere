@@ -1,18 +1,35 @@
+'use client'; // ✅ Must be at the top
+
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Loading from "@/components/Loading";
-export default async function ProductsPage() {
-  const res = await fetch("http://localhost:3000/db.json");
-  const products = await res.json();
+
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
-  
-    useEffect(() => {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Fetch data on client side
+    fetch("/db.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 500); // simulate loader time
+    const timer = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(timer);
-  }, [pathname]); // run every route change
+  }, [pathname]);
+
   return (
     <section className="py-10 px-4 md:px-12 bg-gray-100 dark:bg-gray-900 transition">
       {loading && <Loading />}
+
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">
         All Products
       </h2>
