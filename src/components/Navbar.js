@@ -21,8 +21,8 @@ export default function Navbar() {
 
       {/* Icons */}
       <div className="hidden md:flex space-x-4 text-gray-700">
-        <FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4" />
-        <FontAwesomeIcon icon={faUser} className="w-4 h-4" />
+        <a href="/cart"><FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4 text-gray-700" /></a>
+            <a href="/account"><FontAwesomeIcon icon={faUser} className="w-4 h-4 text-gray-700" /></a>
       </div>
 
       {/* Hamburger Button */}
@@ -39,8 +39,8 @@ export default function Navbar() {
           <a href="/products" className="text-sm font-medium hover:text-sky-600">Products</a>
           <a href="/about" className="text-sm font-medium hover:text-sky-600">About</a>
           <div className="flex space-x-4 pt-2 border-t">
-            <FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4 text-gray-700" />
-            <FontAwesomeIcon icon={faUser} className="w-4 h-4 text-gray-700" />
+            <a href="/cart"><FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4 text-gray-700" /></a>
+            <a href="/account"><FontAwesomeIcon icon={faUser} className="w-4 h-4 text-gray-700" /></a>
           </div>
         </div>
       )}

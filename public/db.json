@@ -2,49 +2,73 @@
   {
     "id": 1,
     "title": "Wireless Headphones",
-    "price": "$99.99",
-    "image": "/h.jpg"
+    "price": 99.99,
+    "image": "/h.jpg",
+    "rating": 4,
+    "reviews": 132,
+    "description": "Experience immersive sound with noise cancellation and long battery life."
   },
   {
     "id": 2,
     "title": "Smartwatch Pro",
-    "price": "$149.99",
-    "image": "/w.jpg"
+    "price": 149.99,
+    "image": "/w.jpg",
+    "rating": 5,
+    "reviews": 210,
+    "description": "Track your fitness, heart rate, and notifications with Smartwatch Pro."
   },
   {
     "id": 3,
     "title": "Bluetooth Speaker",
-    "price": "$79.99",
-    "image": "/s.jpg"
+    "price": 79.99,
+    "image": "/s.jpg",
+    "rating": 4,
+    "reviews": 89,
+    "description": "Portable, powerful, and waterproof speaker for outdoor adventures."
   },
   {
     "id": 4,
     "title": "Gaming Mouse RGB",
-    "price": "$39.99",
-    "image": "/mrgb.jpg"
+    "price": 39.99,
+    "image": "/mrgb.jpg",
+    "rating": 4,
+    "reviews": 142,
+    "description": "Ergonomic gaming mouse with customizable DPI and vibrant RGB lighting."
   },
   {
     "id": 5,
     "title": "Mechanical Keyboard",
-    "price": "$89.99",
-    "image": "/mk.jpg"
+    "price": 89.99,
+    "image": "/mk.jpg",
+    "rating": 5,
+    "reviews": 176,
+    "description": "High-performance mechanical keyboard with blue switches and backlight."
   },
   {
     "id": 6,
     "title": "4K Action Camera",
-    "price": "$199.99",
-    "image": "/c.jpg"
+    "price": 199.99,
+    "image": "/c.jpg",
+    "rating": 4,
+    "reviews": 98,
+    "description": "Capture every moment in ultra-HD with waterproof housing and wide-angle lens."
   },
   {
     "id": 7,
     "title": "Smart LED Bulb",
-    "price": "$19.99",
-    "image": "/l.jpg"
+    "price": 19.99,
+    "image": "/l.jpg",
+    "rating": 3,
+    "reviews": 47,
+    "description": "Control lighting from your phone with voice assistant compatibility."
   },
   {
     "id": 8,
     "title": "USB-C Power Bank",
-    "price": "$59.99",
-    "image": "/p.jpg"
+    "price": 59.99,
+    "image": "/p.jpg",
+    "rating": 5,
+    "reviews": 154,
+    "description": "Fast-charging portable power bank with USB-C and 20000mAh capacity."
   }
 ]

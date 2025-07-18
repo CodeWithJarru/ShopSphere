@@ -1,4 +1,4 @@
-'use client'; // ✅ Must be at the top
+'use client';
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,6 @@ export default function ProductsPage() {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Fetch data on client side
     fetch("/db.json")
       .then((res) => res.json())
       .then((data) => {
@@ -25,6 +24,11 @@ export default function ProductsPage() {
     const timer = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(timer);
   }, [pathname]);
+
+  const addToCart = (product) => {
+    console.log("Added to cart:", product.title);
+    // Later: Dispatch to cart context or store in localStorage
+  };
 
   return (
     <section className="py-10 px-4 md:px-12 bg-gray-100 dark:bg-gray-900 transition">
@@ -49,10 +53,22 @@ export default function ProductsPage() {
               <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                 {product.title}
               </h3>
-              <p className="text-sky-500 font-bold mt-2">{product.price}</p>
+
+              <p className="text-sky-500 font-bold mt-2">${product.price}</p>
+
+              {/* ⭐ Review Stars */}
+              <div className="flex items-center mt-2 text-yellow-400">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <span key={i}>{i < product.rating ? "★" : "☆"}</span>
+                ))}
+                <span className="text-sm text-gray-500 ml-2">({product.reviews} reviews)</span>
+              </div>
+
+
+              {/* 🔍 View Details */}
               <a
                 href={`/p/${product.id}`}
-                className="mt-4 block w-full text-center py-2 bg-sky-500 text-white rounded hover:bg-sky-600 transition"
+                className="mt-2 block w-full text-center py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition"
               >
                 View Details
               </a>

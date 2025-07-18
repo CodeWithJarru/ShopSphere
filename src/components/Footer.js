@@ -18,23 +18,13 @@ export default function Footer() {
 
         {/* Shop Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Shop</h3>
+          <h3 className="text-lg font-semibold mb-3">Links</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="#" className="hover:text-white">Headphones</a></li>
-            <li><a href="#" className="hover:text-white">Watches</a></li>
-            <li><a href="#" className="hover:text-white">Speakers</a></li>
-            <li><a href="#" className="hover:text-white">Accessories</a></li>
-          </ul>
-        </div>
-
-        {/* Support Links */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Support</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="#" className="hover:text-white">FAQs</a></li>
-            <li><a href="#" className="hover:text-white">Shipping & Returns</a></li>
-            <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white">Contact Us</a></li>
+            <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/about" className="hover:text-white">About</a></li>
+            <li><a href="/cart" className="hover:text-white">Cart</a></li>
+            <li><a href="/account" className="hover:text-white">Account</a></li>
+            <li><a href="/products" className="hover:text-white">Products</a></li>
           </ul>
         </div>
 
