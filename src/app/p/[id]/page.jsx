@@ -12,7 +12,7 @@ export default function ProductDetail() {
   useEffect(() => {
     async function fetchProduct() {
       try {
-        const res = await fetch('http://localhost:3000/db.json');
+        const res = await fetch('/db.json');
         const data = await res.json();
         const found = data.find(p => p.id === parseInt(id));
         setProduct(found);
