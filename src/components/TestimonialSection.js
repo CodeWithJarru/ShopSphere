@@ -23,8 +23,8 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="py-12 px-4 md:px-12 bg-white dark:bg-gray-900">
-      <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-white mb-8">
+    <section className="py-12 px-4 md:px-12 bg-white">
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
         What Our Customers Say
       </h2>
 
@@ -32,7 +32,7 @@ export default function TestimonialSection() {
         {testimonials.map((t, idx) => (
           <div
             key={idx}
-            className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition"
+            className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md hover:shadow-lg transition"
           >
             <div className="flex items-center space-x-4 mb-4">
               <img
@@ -41,20 +41,16 @@ export default function TestimonialSection() {
                 className="w-12 h-12 rounded-full object-cover"
               />
               <div>
-                <p className="text-gray-900 dark:text-white font-semibold">
-                  {t.name}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {t.role}
-                </p>
+                <p className="text-gray-900 font-semibold">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.role}</p>
               </div>
             </div>
-            <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-700 text-sm leading-relaxed">
               “{t.comment}”
             </p>
-              </div>
-            ))}
           </div>
-        </section>
-      );
-    }
+        ))}
+      </div>
+    </section>
+  );
+}
